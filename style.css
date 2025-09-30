@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 30px;
 
@@ -24,12 +24,7 @@ body {
     gap: 20px;
 }
 
-.cabecalho {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid #4a6ee0;
-}
+
 
 .nome {
     font-size: 2.5rem;
@@ -137,6 +132,47 @@ body {
     color: #4a6ee0;
     font-weight: 500;
 }
+.idiomas-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+       
+        
+        .nivel-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .barra-progresso {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progresso {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .progresso-portugues {
+            width: 100%;
+            background: #2576ac;
+        }
+        
+        .progresso-ingles {
+            width: 60%;
+            background: #3498db;
+        }
+        
 
 .observacao {
     color: #666;
@@ -154,7 +190,7 @@ body {
     transform: translateY(-5px);
 }
 
-.avatar {
+#avatar {
     width: 190px;
     height: 190px;
     border-radius: 50%;
@@ -204,7 +240,7 @@ body {
 }
 
 .icone {
-    width: 320px;
+    width: 410px;
     height: 90px;
     padding: 8px;
     display: flex;
@@ -242,6 +278,10 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .icone {
+    width: 310px;
+    height: 90px;
+}
 }
 
 @media (max-width: 768px) {
@@ -279,7 +319,6 @@ body {
 .animation {
     height: 50px;
     overflow: hidden;
-    margin-left: 1rem;
 }
 
 .animation>div>div {
@@ -294,20 +333,26 @@ body {
 }
 
 .first div {
-    background-color: #ee71df;
     font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #7092ff;
     font-weight: 500;
 }
 
 .second div {
-    background-color: #CD921E;
     font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #7092ff;
     font-weight: 500;
 }
 
 .third div {
-    background-color: #cc448b;
     font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #7092ff;
     font-weight: 500;
 }
 
@@ -315,35 +360,27 @@ body {
     0% {
         margin-top: 0;
     }
-
     10% {
         margin-top: 0;
     }
-
     20% {
-        margin-top: -3.62rem;
+        margin-top: -4.62rem;
     }
-
     30% {
-        margin-top: -3.62rem;
+        margin-top: -4.62rem;
     }
-
     40% {
-        margin-top: -8.64rem;
+        margin-top: -9.64rem;
     }
-
     60% {
-        margin-top: -8.64rem;
+        margin-top: -9.64rem;
     }
-
     70% {
-        margin-top: -3.62rem;
+        margin-top: -4.62rem;
     }
-
     80% {
-        margin-top: -3.62rem;
+        margin-top: -4.62rem;
     }
-
     90% {
         margin-top: 0;
     }
@@ -443,15 +480,7 @@ article:has(:hover, :focus) {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 48px 0;
 
-  font-size: 0.9rem;
-  line-height: 1.6rem;
-  background-image: linear-gradient(45deg, #8bb2d8, #6891c8);
-  min-height: 100vh;
-}
 
 .articles {
   display: grid;
@@ -501,3 +530,180 @@ body {
   white-space: nowrap; 
   width: 1px;
 }
+
+
+
+
+
+
+
+
+
+.banner-completo {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .banner-esquerda {
+            padding: 40px;
+        }
+        
+        .saudacao {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .nome-principal {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+        
+        .profissao {
+            font-size: 1.8rem;
+            color: #60a5fa;
+            font-weight: 500;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        
+        .descricao {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        
+        .destaque {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .banner-direita {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nome-completo {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .info-rapida {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .info-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #60a5fa;
+        }
+        
+        .info-titulo {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .info-conteudo {
+            font-size: 1.1rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        
+        .botao-contato {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .botao-contato:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+        }
+        
+        @media (max-width: 968px) {
+            .banner-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .banner-esquerda {
+                padding: 20px;
+            }
+            
+            .nome-principal {
+                font-size: 2.8rem;
+            }
+            
+            .profissao {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nome-principal {
+                font-size: 2.2rem;
+            }
+            
+            .profissao {
+                font-size: 1.3rem;
+            }
+            
+            .saudacao {
+                font-size: 1rem;
+            }
+            
+            .banner-direita {
+                padding: 30px 20px;
+            }
+        }
