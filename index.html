@@ -12,10 +12,8 @@
 
 <body>
 
-    <!-- CANVAS: chuva de código estilo matrix -->
     <canvas id="matrix-canvas"></canvas>
 
-    <!-- BANNER PRINCIPAL -->
     <div class="banner-completo">
         <div class="banner-container">
             <div class="banner-esquerda">
@@ -61,10 +59,8 @@
         </div>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
 
-        <!-- PERFIL + FORMAÇÃO -->
         <div class="info">
             <div class="secao-perfil reveal">
                 <div class="secao">
@@ -145,7 +141,6 @@
             </div>
         </div>
 
-        <!-- PROJETOS -->
         <div class="secao reveal">
             <h2 class="titulo-secao">Experiência com Projetos</h2>
             <section class="articles">
@@ -242,7 +237,6 @@
             </section>
         </div>
 
-        <!-- CURSOS + TECNOLOGIAS -->
         <div class="info">
             <div class="secao reveal">
                 <h2 class="titulo-secao">Cursos e Premiações</h2>
@@ -281,15 +275,21 @@
                     <span class="tech-tag">Volatility</span>
                     <span class="tech-tag">FTK Imager</span>
                     <span class="tech-tag">Eric Zimmerman's tools</span>
+                    <span class="tech-tag">Autopsy</span>
                     <span class="tech-tag">Wazuh</span>
+                    <span class="tech-tag">mitre att&ck</span>
+                    <span class="tech-tag">Active Directory</span>
+                    <span class="tech-tag">Group Policy (GPO)</span>
+                    <span class="tech-tag">Windows Server</span>
+                    <span class="tech-tag">PKI Management</span>
+
                 </div>
             </div>
         </div>
 
-    </div><!-- fim .container -->
+    </div>
 
     <script>
-        /* ── MATRIX CANVAS ── */
         const canvas = document.getElementById('matrix-canvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -317,7 +317,6 @@
         }
         setInterval(drawMatrix, 60);
 
-        /* ── DECRYPT NAME ── */
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         function decryptText(el, original, iterations = 0) {
             if (iterations >= original.length * 3) { el.textContent = original; return; }
@@ -331,7 +330,6 @@
         const originalName = decryptEl.textContent;
         setTimeout(() => decryptText(decryptEl, originalName), 400);
 
-        /* ── TERMINAL TYPING ── */
         const termLines = document.querySelectorAll('.terminal-line');
         termLines.forEach((line, i) => {
             line.style.opacity = '0';
@@ -341,7 +339,6 @@
             }, 300 + i * 500);
         });
 
-        /* ── SCROLL REVEAL ── */
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -353,13 +350,11 @@
         }, { threshold: 0.12 });
         reveals.forEach(el => observer.observe(el));
 
-        /* ── TECH TAG HOVER DECRYPT ── */
         document.querySelectorAll('.tech-tag').forEach(tag => {
             const orig = tag.textContent;
             tag.addEventListener('mouseenter', () => decryptText(tag, orig));
         });
 
-        /* ── PROGRESS BAR ANIMATE ON SCROLL ── */
         const barObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
