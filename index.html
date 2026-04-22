@@ -4,341 +4,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Ana Lívia dos Santos Lopes</title>
+    <title>Portfólio - Ana Lívia dos Santos Lopes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- CANVAS: chuva de código estilo matrix -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- BANNER PRINCIPAL -->
     <div class="banner-completo">
-
-
         <div class="banner-container">
             <div class="banner-esquerda">
-                <div class="saudacao">olá,</div>
-                <h1 class="nome-principal">Eu sou Ana Lívia dos Santos Lopes <span class="destaque"></span></h1>
+                <div class="saudacao glitch-text" data-text="olá,">olá,</div>
+                <h1 class="nome-principal"><span class="decrypt-name">Eu sou Ana Lívia</span></h1>
+
                 <section class="animation">
-                    <div class="first">
-                        <div>Programadora</div>
-                    </div>
-                    <div class="second">
-                        <div>Penetration Tester</div>
-                    </div>
-                    <div class="third">
-                        <div>Analista de SOC</div>
-                    </div>
+                    <div class="first"><div>Programadora</div></div>
+                    <div class="second"><div>Penetration Tester</div></div>
+                    <div class="third"><div>Analista de SOC</div></div>
                 </section>
 
                 <p class="descricao">
-                    Este é meu portfólio que apresenta minha trajetória como desenvolvedora, projetos realizados e
-                    habilidades em programação com metodologias ágeis e segurança cibernética.
+                    Este é meu portfólio que apresenta minha trajetória como desenvolvedora,
+                    projetos realizados e habilidades em programação e segurança cibernética.
                 </p>
 
-                <button class="botao-contato" onclick="location.href='#avatar'">Iniciar</button>
+                <button class="botao-contato" onclick="document.getElementById('avatar').scrollIntoView({behavior:'smooth'})">
+                    <span class="btn-text">Iniciar</span>
+                    <span class="btn-cursor">_</span>
+                </button>
             </div>
 
             <div class="banner-direita">
-                <div class="nome-completo">ANA LÍVIA DOS SANTOS LOPES</div>
-
-                <div class="info-rapida">
-                    <div class="info-item">
-                        <div class="info-conteudo">Desenvolvimento Frontend</div>
-                        <div class="info-titulo">Tecnico em Desenvolvimento de sistemas SENAI</div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-conteudo">Desenvolvimento Backend</div>
-                        <div class="info-titulo">Tecnico em Desenvolvimento de sistemas SENAI</div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-conteudo">Segurança cibernética</div>
-                        <div class="info-titulo">Treinamento Worldskills</div>
-                    </div>
+                <div class="terminal-header">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="terminal-title">ana_livia.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+                    <div class="terminal-line output">Ana Lívia dos Santos Lopes</div>
+                    <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat formacao.txt</span></div>
+                    <div class="terminal-line output">→ Frontend Developer <span class="tag">SENAI</span></div>
+                    <div class="terminal-line output">→ Backend Developer <span class="tag">SENAI</span></div>
+                    <div class="terminal-line output">→ Cybersecurity <span class="tag">Worldskills</span></div>
+                    <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">status</span></div>
+                    <div class="terminal-line output"><span class="status-ok">● ONLINE</span> &mdash; disponível para oportunidades</div>
+                    <div class="terminal-line blink-line"><span class="prompt">$</span> <span class="cursor-blink">█</span></div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
 
+        <!-- PERFIL + FORMAÇÃO -->
         <div class="info">
-            <div class="secao-perfil">
+            <div class="secao-perfil reveal">
                 <div class="secao">
-                    <div class="secao">
-                        <img id="avatar" src="./img/img.png" alt="">
+                    <img id="avatar" src="./img/img.png" alt="Ana Lívia">
+                    <div class=" hr1 divisor"></div>
+                    <p class="sobre-mim">
+                        Sou uma programadora que cria interfaces web funcionais e visualmente atraentes.
+                        Tenho experiência no desenvolvimento de sites responsivos e acessíveis, sempre buscando
+                        as melhores práticas e tecnologias modernas.
+                    </p>
+                    <br>
+                    <p class="sobre-mim">
+                        Além disso, estudo segurança cibernética, onde busco me aprofundar em técnicas
+                        de proteção e defesa de sistemas.
+                    </p>
 
-
-                        <div class="divisor"></div>
-
-                        <p class="descricao">
-                        <p class="sobre-mim">
-                            Sou uma programadora, crio interfaces web funcionais e visualmente
-                            atraentes.Tenho experiência no desenvolvimento de sites responsivos e acessíveis, sempre
-                            buscando as
-                            melhorespráticas e tecnologias modernas.
-                        </p> <br>
-
-                        <p>
-                            Alem disso estudo na area de segurança cibernética, onde busco
-                            me aprofundar em técnicas de proteção e defesa de sistemas.
-                        </p>
-                        </p>
-
-                        <div class="contato">
-                            <a href="https://github.com/Ana-Livia-Lopes" target="_blank" class="icone">Github: <br>
-                                https://github.com/Ana-Livia-Lopes</a>
-                            <a href="https://www.linkedin.com/in/ana-livia-santos-lopes" target="_blank"
-                                class="icone">LinkedIn: <br> https://www.linkedin.com/in/ana-livia-santos-lopes</a>
-                            <a href="mailto:ana.livia.santos.lopes@gmail.com" target="_blank" class="icone">Gmail:
-                                <br>ana.livia.santos.lopes@gmail.com</a>
-                        </div>
+                    <div class="contato contato1">
+                        <a href="https://github.com/Ana-Livia-Lopes" target="_blank" class="icone">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                            Github
+                        </a>
+                        <a href="https://www.linkedin.com/in/ana-livia-santos-lopes" target="_blank" class="icone">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="mailto:ana.livia.santos.lopes@gmail.com" class="icone">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                            Gmail
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="secao">
 
-                <div class="secao">
+            <div class="coluna-direita">
+                <div class="secao reveal">
                     <h2 class="titulo-secao">Formação Acadêmica</h2>
-                    <p class="sobre-mim">
                     <div class="contato">
-                        <div class="icone" style="cursor: default;">Ensino Fundamental e Médio <br> 2014 - 2025 | Escola
-                            SESI Caçapava</div>
-                        <div class="icone" style="cursor: default;">Técnico em Desenvolvimento de Sistemas <br> 2024 -
-                            2025 | SENAI Taubaté</div>
+                        <div class="icone" style="cursor:default;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                            Ensino Fundamental e Médio <br> 2014 - 2025 | Escola SESI Caçapava
+                        </div>
+                        <div class="icone" style="cursor:default;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                            Técnico em Desenvolvimento de Sistemas <br> 2024 - 2025 | SENAI Taubaté
+                        </div>
+                        <div class="icone" style="cursor:default;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                            Faculdade em Análise e Desenvolvimento de Sistemas <br> 2026 - 2028 | SENAI Taubaté
+                        </div>
                     </div>
                 </div>
-                <div class="secao-idiomas">
-                    <h2 class="titulo-secao">IDIOMAS</h2>
 
+                <div class="secao-idiomas reveal">
+                    <h2 class="titulo-secao">Idiomas</h2>
                     <ul class="lista-idiomas">
                         <li class="item-idioma">
                             <div class="idioma">Português</div>
-                            <div class="idioma-item">
-                                <div class="nivel-container">
-                                    <div class="barra-progresso">
-                                        <div class="progresso progresso-portugues"></div>
-                                    </div>
-                                    <span class="nivel-texto">Nativo</span>
+                            <div class="nivel-container">
+                                <div class="barra-progresso">
+                                    <div class="progresso progresso-portugues"></div>
                                 </div>
+                                <span class="nivel-texto">Nativo</span>
                             </div>
                         </li>
-
                         <div class="divisor"></div>
-
                         <li class="item-idioma">
                             <div class="idioma">Inglês</div>
-                            <div class="idioma-item">
-                                <div class="nivel-container">
-                                    <div class="barra-progresso">
-                                        <div class="progresso progresso-ingles"></div>
-                                    </div>
-                                    <span class="nivel-texto">Intermediário</span>
+                            <div class="nivel-container">
+                                <div class="barra-progresso">
+                                    <div class="progresso progresso-ingles"></div>
                                 </div>
-                                <div class="observacao">(cursando)</div>
+                                <span class="nivel-texto">Intermediário</span>
                             </div>
+                            <div class="observacao">(cursando)</div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="secao">
-            <div class="secao">
-                <h2 class="titulo-secao">EXPERIÊNCIA COM PROJETOS</h2>
-                <section class="articles">
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto1.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Projeto Voluntário para ONG Essência Azul</h2>
-                                <p>
-                                    Site Realizado para Facilitar a organização e gestão dos frequentadores, promovendo
-                                    maior eficiência na comunicação entre a associação e os envolvidos.
-                                </p>
-                                <a href="https://essenciaazul.onrender.com/" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
+        <!-- PROJETOS -->
+        <div class="secao reveal">
+            <h2 class="titulo-secao">Experiência com Projetos</h2>
+            <section class="articles">
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto1.png" alt="ONG Essência Azul" /></figure>
+                        <div class="article-body">
+                            <h2>Projeto Voluntário para ONG Essência Azul</h2>
+                            <p>Site para facilitar a organização e gestão dos frequentadores, promovendo acessibilidade e eficiência para a ONG.</p>
+                            <a href="https://www.portalessenciaazul.cloud/" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
                         </div>
-                    </article>
-                    <article>
-
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto2.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Projeto site informativo de história para a Escola SESI</h2>
-                                <p>
-                                    Site requisitado por um professor de história para ser utilizado com crianças do
-                                    ensino fundamental para aprendizado da matéria
-                                </p>
-                                <a href="https://github.com/Ana-Livia-Lopes/WebHistory" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto3.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Projeto para gerenciamento de hoteis</h2>
-                                <p>
-                                    Site desenvolvido para Facilitar a reserva de quartos de hotel, permitindo aos
-                                    usuários
-                                    visualizar a disponibilidade, fazer reservas e gerenciar suas estadias de forma
-                                    eficiente.
-                                </p>
-                                <a href="https://essenciaazul.onrender.com/" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto4.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Projeto calculo de juros</h2>
-                                <p>
-                                    Site desenvolvido para calcular juros simples e compostos, permitindo aos usuários
-                                    inserir valores, taxas e períodos para obter resultados precisos e facilitar o
-                                    planejamento financeiro.
-                                </p>
-                                <a href="https://github.com/Ana-Livia-Lopes/WebHistory" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto5.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Site sobre segurança cibernética</h2>
-                                <p>
-                                    Site desenvolvido para fornecer informações e recursos sobre segurança cibernética
-                                    que adiquiri ao longo do meu aprendizado.
-                                </p>
-                                <a href="https://github.com/Ana-Livia-Lopes/cybersecurity-website" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="./img/projeto6.png" alt="" />
-                            </figure>
-                            <div class="article-body">
-                                <h2>Projeto sobre venda de artigos esportivos</h2>
-                                <p>
-                                    App desenvolvido para venda de artigos esportivos onde o usuario pode adicionar
-                                    produtos ao carrinho e fazer sua compra.
-                                </p>
-                                <a href="https://github.com/Lucas-Balderrama/app_syncro_smartweb" class="read-more">
-                                    visitar site <span class="sr-only">about this is some title</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-            </div>
-        </div>
-
-        <div class="info">
-            <div class="secao">
-                <div class="secao">
-                    <div class="secao">
-                        <h2 class="titulo-secao">Cursos e premiações</h2>
-                        <p class="sobre-mim">
-                        <ul>
-                            <li>Certificado “eRobótica”, 3º lugar na modalidade de programação com mais de 1900
-                                participantes.</li>
-                            <li>4º lugar na competição de programação e tecnologia SENAI dev Experience 2024</li>
-                            <li>Certificado de conclusão de curso FreeCodeCamp: “Design responsivo” 300 horas.</li>
-                            <li>Certificado de conclusão de curso Cisco: “Introduction to Cybersecurity” 6 horas.</li>
-                            <li>Certificado de conclusão de curso Cisco: JavaScript 90 horas.</li>
-                            <li>Certificado de conclusão de curso Cisco: Python 70 horas.</li>
-                        </ul>
-                        </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="secao">
-                <div class="secao">
-                    <h2 class="titulo-secao">Tecnologias</h2>
-                    <p class="sobre-mim">
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>React Native</li>
-                        <li>Git/Github</li>
-                        <li>Python</li>
-                        <li>Figma</li>
-                        <li>Canva</li>
-                        <li>Linux</li>
-                        <li>IoT</li>
-                        <li>AWS (Amazon Web Services)</li>
-                        <li>MySQL</li>
-                        <li>Firebase</li>
-                        <li>Supabase</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-
+                </article>
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto2.png" alt="Projeto 2" /></figure>
+                        <div class="article-body">
+                            <h2>Projeto Web History</h2>
+                            <p>Aplicação para explorar e registrar a história da web e seus avanços tecnológicos ao longo do tempo.</p>
+                            <a href="https://github.com/Ana-Livia-Lopes/WebHistory" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto3.png" alt="Gerenciamento de hotéis" /></figure>
+                        <div class="article-body">
+                            <h2>Projeto para gerenciamento de hotéis</h2>
+                            <p>Site para facilitar a reserva de quartos, visualizar disponibilidade e gerenciar estadias de forma eficiente.</p>
+                            <a href="https://www.portalessenciaazul.cloud/" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto4.png" alt="Cálculo de juros" /></figure>
+                        <div class="article-body">
+                            <h2>Projeto cálculo de juros</h2>
+                            <p>Site para calcular juros simples e compostos, facilitando o planejamento financeiro com resultados precisos.</p>
+                            <a href="https://github.com/Ana-Livia-Lopes/WebHistory" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto5.png" alt="Segurança cibernética" /></figure>
+                        <div class="article-body">
+                            <h2>Site sobre segurança cibernética</h2>
+                            <p>Site com informações e recursos sobre segurança cibernética desenvolvidos ao longo do meu aprendizado.</p>
+                            <a href="https://github.com/Ana-Livia-Lopes/cybersecurity-website" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-wrapper">
+                        <figure><img src="./img/projeto6.png" alt="Artigos esportivos" /></figure>
+                        <div class="article-body">
+                            <h2>App de venda de artigos esportivos</h2>
+                            <p>App para venda de artigos esportivos onde o usuário pode adicionar produtos ao carrinho e finalizar a compra.</p>
+                            <a href="https://github.com/Lucas-Balderrama/app_syncro_smartweb" target="_blank" class="read-more">
+                                visitar site
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
 
-</body>
+        <!-- CURSOS + TECNOLOGIAS -->
+        <div class="info">
+            <div class="secao reveal">
+                <h2 class="titulo-secao">Cursos e Premiações</h2>
+                <ul class="lista-conquistas">
+                    <li> 3º lugar no eRobótica — modalidade programação (1900+ participantes)</li>
+                    <li> 4º lugar no SENAI Dev Experience 2025</li>
+                    <li> FreeCodeCamp: Design Responsivo — 300h</li>
+                    <li> Cisco: "Introduction to Cybersecurity" — 6h</li>
+                    <li> Cisco: "JavaScript" — 90h</li>
+                    <li> Cisco: "Python" — 70h</li>
+                    <li>FIAP: “Cybersecurity” 120hs</li>
+                    <li>FIAP: “Linux fundamentos” 120hs</li>
+                    <li>SOLYD: “Introdução ao hacking e pentest 2.0” 8hs</li>
+                </ul>
+            </div>
 
+            <div class="secao reveal">
+                <h2 class="titulo-secao">Tecnologias</h2>
+                <div class="tech-grid">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Git / GitHub</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Linux</span>
+                    <span class="tech-tag">IoT</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Kali Linux</span>
+                    <span class="tech-tag">BurpSuíte</span>
+                    <span class="tech-tag">BruteForce Tools</span>
+                    <span class="tech-tag">WireShark</span>
+                    <span class="tech-tag">Volatility</span>
+                    <span class="tech-tag">FTK Imager</span>
+                    <span class="tech-tag">Eric Zimmerman's tools</span>
+                    <span class="tech-tag">Wazuh</span>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- fim .container -->
+
+    <script>
+        /* ── MATRIX CANVAS ── */
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        const chars = '01アイウエオカキクケコABCDEFGHIJKLMNOPQRSTUVWXYZ<>{}[]//\\';
+        const fontSize = 13;
+        let cols = Math.floor(canvas.width / fontSize);
+        let drops = Array(cols).fill(1);
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#1e3a5f';
+            ctx.font = fontSize + 'px Share Tech Mono';
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillStyle = i % 5 === 0 ? '#60a5fa33' : '#1e3a5f22';
+                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 60);
+
+        /* ── DECRYPT NAME ── */
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        function decryptText(el, original, iterations = 0) {
+            if (iterations >= original.length * 3) { el.textContent = original; return; }
+            el.textContent = original.split('').map((char, i) => {
+                if (i < Math.floor(iterations / 3)) return char;
+                return char === ' ' ? ' ' : letters[Math.floor(Math.random() * letters.length)];
+            }).join('');
+            setTimeout(() => decryptText(el, original, iterations + 1), 40);
+        }
+        const decryptEl = document.querySelector('.decrypt-name');
+        const originalName = decryptEl.textContent;
+        setTimeout(() => decryptText(decryptEl, originalName), 400);
+
+        /* ── TERMINAL TYPING ── */
+        const termLines = document.querySelectorAll('.terminal-line');
+        termLines.forEach((line, i) => {
+            line.style.opacity = '0';
+            setTimeout(() => {
+                line.style.transition = 'opacity 0.3s';
+                line.style.opacity = '1';
+            }, 300 + i * 500);
+        });
+
+        /* ── SCROLL REVEAL ── */
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+
+        /* ── TECH TAG HOVER DECRYPT ── */
+        document.querySelectorAll('.tech-tag').forEach(tag => {
+            const orig = tag.textContent;
+            tag.addEventListener('mouseenter', () => decryptText(tag, orig));
+        });
+
+        /* ── PROGRESS BAR ANIMATE ON SCROLL ── */
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.progresso').forEach(bar => {
+                        bar.style.width = bar.dataset.width || bar.style.width;
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+        document.querySelectorAll('.secao-idiomas').forEach(el => barObserver.observe(el));
+    </script>
+</body>
 </html>
